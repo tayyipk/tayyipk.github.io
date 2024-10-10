@@ -3,53 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Webseite</title>
+    <title>Visitenkarte</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>/* styles.css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        
+        .container {
+            perspective: 1000px; /* Für den 3D-Effekt */
+        }
+        
+        .card {
+            width: 350px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .card-front {
+            /* Vorderseite der Karte */
+        }
+
+        .card.is-flipped {
+    transform: rotateY(180deg);
+        }
+        
+        .card-back {
+            /* Rückseite der Karte */
+            transform: rotateY(180deg);
+        }
+        
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin: 5px 0;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+        .hint {
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5); /* Dezente, halbtransparente Farbe */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hint i {
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+        </style>
 </head>
 <body>
-
-    <!-- Header -->
-    <header>
-        <h1>Willkommen auf meiner Webseite</h1>
-    </header>
-
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#projects">Projekte</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hauptinhalt -->
-    <section id="home">
-        <h2>Home</h2>
-        <p>Dies ist eine minimalistische Webseite ohne CSS.</p>
-    </section>
-
-    <section id="about">
-        <h2>Über mich</h2>
-        <p>Ich bin ein Webentwickler, der einfache Webseiten erstellt.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projekte</h2>
-        <ul>
-            <li>Projekt 1: Eine einfache HTML-Seite</li>
-            <li>Projekt 2: Ein interaktives JavaScript-Projekt</li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Email: <a href="mailto:meineemail@example.com">meineemail@example.com</a></p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Meine Webseite</p>
-    </footer>
-
+    <div class="container">
+        <div class="card">
+            <div class="card-face card-front">
+                <h1>Webdeveloper</h1>
+                <p>Max Mustermann</p>
+                <p><a href="mailto:max@webagentur.com">max@webagentur.com</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="hint">
+                    <i class="fas fa-sync-alt"></i> Umdrehen
+                </div>
+            </div>
+            <div class="card-face card-back">
+                <h2>Über mich</h2>
+                <p>Ich bin ein erfahrener Webdeveloper, der weltweit für moderne Weblösungen sorgt. Ich liebe es, mit minimalistischen Designs zu arbeiten und fokussiere mich auf Benutzerfreundlichkeit und Ästhetik.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
