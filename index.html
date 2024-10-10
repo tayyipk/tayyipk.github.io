@@ -3,83 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Meine GitHub-Seite</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
-
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        nav a:hover {
-            color: #4CAF50;
-        }
-
-        section {
-            margin: 20px;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <title>Meine Webseite</title>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
-        <h1>Willkommen auf meiner Test-Webseite</h1>
+        <h1>Willkommen auf meiner Webseite</h1>
     </header>
 
+    <!-- Navigation -->
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Über mich</a>
-        <a href="#">Projekte</a>
-        <a href="#">Kontakt</a>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Über mich</a></li>
+            <li><a href="#projects">Projekte</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
     </nav>
 
-    <section>
-        <h2>Über mich</h2>
-        <p>Hallo! Ich bin ein Webentwickler, der es liebt, sauberen und eleganten Code zu schreiben. Auf dieser Seite findest du Informationen über meine Projekte, meine Arbeit und wie du mich kontaktieren kannst.</p>
+    <!-- Hauptinhalt -->
+    <section id="home">
+        <h2>Home</h2>
+        <p>Dies ist eine minimalistische Webseite ohne CSS.</p>
+    </section>
 
+    <section id="about">
+        <h2>Über mich</h2>
+        <p>Ich bin ein Webentwickler, der einfache Webseiten erstellt.</p>
+    </section>
+
+    <section id="projects">
         <h2>Projekte</h2>
         <ul>
-            <li><strong>Projekt 1:</strong> Eine einfache Website mit HTML und CSS</li>
-            <li><strong>Projekt 2:</strong> Eine interaktive Anwendung mit JavaScript</li>
-            <li><strong>Projekt 3:</strong> Ein Blog mit einem Content-Management-System</li>
+            <li>Projekt 1: Eine einfache HTML-Seite</li>
+            <li>Projekt 2: Ein interaktives JavaScript-Projekt</li>
         </ul>
     </section>
 
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Email: <a href="mailto:meineemail@example.com">meineemail@example.com</a></p>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        &copy; 2024 Meine Webseite | Erstellt von [Dein Name]
+        <p>&copy; 2024 Meine Webseite</p>
     </footer>
 
 </body>
