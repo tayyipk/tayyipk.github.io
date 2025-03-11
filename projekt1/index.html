@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitenkarte</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>/* styles.css */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+        
+        .container {
+            perspective: 1000px; /* Für den 3D-Effekt */
+        }
+        
+        .card {
+            width: 350px;
+            height: 200px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+        }
+        
+        .card-front {
+            /* Vorderseite der Karte */
+        }
+
+        .card.is-flipped {
+            transform: rotateY(180deg);
+        }
+        
+        .card-back {
+            /* Rückseite der Karte */
+            transform: rotateY(180deg);
+        }
+        
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin: 5px 0;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .projects {
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        .projects h3 {
+            font-size: 1em;
+            margin-bottom: 8px;
+        }
+
+        .projects ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .projects li {
+            margin-bottom: 10px;
+        }
+
+        .projects a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .projects a:hover {
+            text-decoration: underline;
+        }
+
+        /* Projekt-Grid für kompakte Darstellung */
+        .project-grid {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .project-item {
+            background-color: #f9f9f9;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1 1 70px; /* Flexible Größe */
+            min-width: 70px;
+            font-size: 0.85em;
+        }
+
+        .project-item a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-item a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+        .hint {
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5); /* Dezente, halbtransparente Farbe */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hint i {
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+        </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-face card-front">
+                <h1>🦫Web Biber</h1>
+                <p>tayyip k</p>
+                <p><a href="mailto:max@webagentur.com">max@webagentur.com</a></p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://tayyipk.github.io/"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="hint">
+                    <i class="fas fa-sync-alt"></i> umdrehen
+                </div>
+            </div>
+            <div class="card-face card-back">
+                <h2>Über mich</h2>
+                <p>Ich bin ein erfahrener Webdeveloper, der weltweit für moderne Weblösungen sorgt. Ich liebe es, mit minimalistischen Designs zu arbeiten.</p>
+                
+                <!-- Projekte-Liste kompakt -->
+                <div class="projects">
+                    <div class="project-grid">
+                        <div class="project-item"><a href="#" target="_blank">Projekt 1</a></div>
+                        <div class="project-item"><a href="#" target="_blank">Projekt 2</a></div>
+                        <div class="project-item"><a href="#" target="_blank">Projekt 3</a></div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    
+    <script>document.querySelector('.card').addEventListener('click', function() {
+        this.classList.toggle('is-flipped');
+    });</script>
+</body>
+</html>

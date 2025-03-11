@@ -1,0 +1,172 @@
+/* Dropdown-Menü Standardzustand */
+.dropdown-menu {
+    display: none;
+    opacity: 0;
+    transition: opacity 300ms ease-out, transform 300ms ease-out;
+    transform: translateY(-10px);
+}
+
+/* Dropdown-Menü sichtbar */
+.dropdown-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover-Verhalten für Desktop */
+@media (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#mobile-menu {
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+body.dark-mode header {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode .bg-pastel-blue {
+    background-color: #2d3748;
+}
+
+body.dark-mode .bg-pastel-yellow {
+    background-color: #4a5568;
+}
+
+body.dark-mode .bg-pastel-green {
+    background-color: #2c5282;
+}
+
+body.dark-mode .bg-pastel-pink {
+    background-color: #6b46c1;
+}
+
+body.dark-mode .bg-pastel-purple {
+    background-color: #805ad5;
+}
+
+body.dark-mode .bg-pastel-orange {
+    background-color: #d69e2e;
+}
+
+body.dark-mode .text-gray-600 {
+    color: #a0aec0;
+}
+
+body.dark-mode .text-gray-900 {
+    color: #ffffff;
+}
+
+body.dark-mode .bg-white {
+    background-color: #2d3748;
+    color: #ffffff;
+}
+
+body.dark-mode .bg-gray-200 {
+    background-color: #4a5568;
+    color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: #2d3748;
+    color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu a {
+    color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu a:hover {
+    background-color: #4a5568;
+}
+
+body.dark-mode footer {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+body.dark-mode #mobile-menu {
+    background-color: #2d3748;
+    color: #ffffff;
+}
+
+body.dark-mode #mobile-menu a {
+    color: #ffffff;
+}
+
+body.dark-mode #mobile-menu a:hover {
+    background-color: #4a5568;
+}
+
+body.dark-mode .bg-black {
+    background-color: #000000;
+}
+
+body.dark-mode .text-white {
+    color: #ffffff;
+}
+
+body.dark-mode .bg-opacity-50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .bg-opacity-80 {
+    background-color: rgba(45, 55, 72, 0.8);
+}
+
+/* Dark Mode Styles für das mobile Menü */
+body.dark-mode #mobile-menu {
+    background-color: #2d3748; /* Dunkler Hintergrund für das mobile Menü */
+    color: #ffffff; /* Weiße Schrift */
+}
+
+body.dark-mode #mobile-menu a {
+    color: #ffffff; /* Weiße Schrift für Links */
+}
+
+body.dark-mode #mobile-menu a:hover {
+    background-color: #4a5568; /* Hover-Effekt für Links */
+}
+
+/* Dark Mode Styles für mobile Dropdown-Menüs */
+body.dark-mode .mobile-dropdown button {
+    color: #ffffff; /* Weiße Schrift für Dropdown-Buttons */
+}
+
+body.dark-mode .mobile-dropdown .hidden {
+    background-color: #2d3748; /* Dunkler Hintergrund für Untermenüs */
+}
+
+body.dark-mode .mobile-dropdown .hidden a {
+    color: #ffffff; /* Weiße Schrift für Untermenü-Links */
+}
+
+body.dark-mode .mobile-dropdown .hidden a:hover {
+    background-color: #4a5568; /* Hover-Effekt für Untermenü-Links */
+}
+
+/* Dark Mode Styles für den mobilen Menü-Button */
+body.dark-mode #mobile-menu-button {
+    color: #ffffff; /* Weiße Schrift für den Menü-Button */
+}
+
+body.dark-mode #mobile-menu-button:hover {
+    color: #a0aec0; /* Hover-Effekt für den Menü-Button */
+}

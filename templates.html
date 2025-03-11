@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates - Meine Website</title>
+
+    <!-- Tailwind CSS über CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Eigene Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Tailwind-Konfiguration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastel: {
+                            blue: '#A0E7E5',
+                            yellow: '#FBE7C6',
+                            green: '#B4F8C8',
+                            pink: '#FFAEBC',
+                            purple: '#D0B8E3',
+                            orange: '#FFD8B1',
+                        },
+                    },
+                    transitionProperty: {
+                        visibility: 'visibility',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-pastel-blue">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div class="text-2xl font-bold text-pastel-blue">
+                <!-- Füge diesen Button in den Header ein, z.B. neben dem Logo oder in der Navigation -->
+                <button id="dark-mode-toggle" class="text-gray-600 hover:text-gray-900"
+                    aria-label="Dark Mode umschalten">
+                    <i class="fas fa-moon text-lg px-2"></i> <!-- Icon für den Dark Mode -->
+                </button>Logo
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex space-x-4">
+                <a href="index.html" class="text-gray-600 hover:text-gray-900 flex items-center"
+                    aria-label="Zur Startseite">
+                    <i class="fas fa-home mr-2"></i>Home
+                </a>
+
+                <!-- Dropdown Menüs -->
+                <div class="dropdown relative group">
+                    <button class="text-gray-600 hover:text-gray-900 flex items-center">
+                        <i class="fas fa-list mr-2"></i><a href="templates.html">Templates</a> <i
+                            class="fas fa-chevron-down ml-1"></i>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 mt-2 bg-white py-2 w-48 rounded-md shadow-xl">
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 1</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 2</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown relative group">
+                    <button class="text-gray-600 hover:text-gray-900 flex items-center">
+                        <i class="fas fa-cog mr-2"></i>Menü 2 <i class="fas fa-chevron-down ml-1"></i>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 mt-2 bg-white py-2 w-48 rounded-md shadow-xl">
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 1</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 2</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown relative group">
+                    <button class="text-gray-600 hover:text-gray-900 flex items-center">
+                        <i class="fas fa-user mr-2"></i><a href="blog.html">re:Blog</a> <i
+                            class="fas fa-chevron-down ml-1"></i>
+                    </button>
+                    <div class="dropdown-menu absolute left-0 mt-2 bg-white py-2 w-48 rounded-md shadow-xl">
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 1</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 2</a>
+                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 3</a>
+                    </div>
+                </div>
+
+                <a href="#" class="text-gray-600 hover:text-gray-900 flex items-center" aria-label="Zur Kontaktseite">
+                    <i class="fas fa-envelope mr-2"></i>Kontakt
+                </a>
+            </div>
+
+
+            <!-- Mobile Menü Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600" aria-label="Mobile-Menü anzeigen">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menü -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white fixed w-full z-40 top-16 shadow-lg">
+        <a href="index.html" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Zur Startseite">
+            <i class="fas fa-home mr-2"></i>Home
+        </a>
+
+        <!-- Dropdown Menü 1 -->
+        <div class="mobile-dropdown">
+            <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100 flex items-center"
+                aria-label="Menü 1 anzeigen">
+                <i class="fas fa-list mr-2"></i>Menü 1 <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+            <div class="hidden pl-8">
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 1">Untermenü
+                    1</a>
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 2">Untermenü
+                    2</a>
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 3">Untermenü
+                    3</a>
+            </div>
+        </div>
+
+        <!-- Dropdown Menü 2 -->
+        <div class="mobile-dropdown">
+            <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100 flex items-center"
+                aria-label="Menü 2 anzeigen">
+                <i class="fas fa-cog mr-2"></i>Menü 2 <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+            <div class="hidden pl-8">
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 1">Untermenü
+                    1</a>
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 2">Untermenü
+                    2</a>
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 3">Untermenü
+                    3</a>
+            </div>
+        </div>
+
+        <!-- Dropdown Menü 3 -->
+        <div class="mobile-dropdown">
+            <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100 flex items-center"
+                aria-label="Menü 3 anzeigen">
+                <i class="fas fa-user mr-2"></i>re:Blog <i class="fas fa-chevron-down ml-1"></i>
+            </button>
+            <div class="hidden pl-8">
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 1">Untermenü
+                    1</a>
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 2">Untermenü
+                    2</a>
+                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 3">Untermenü
+                    3</a>
+            </div>
+        </div>
+
+        <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Zur Kontaktseite">
+            <i class="fas fa-envelope mr-2"></i>Kontakt
+        </a>
+    </div>
+
+    <!-- Hauptinhalt -->
+    <main class="container mx-auto px-4 py-24 bg-white bg-opacity-90">
+
+        <!-- Call to Action Banner -->
+        <section class="bg-cover bg-center h-64 flex items-center justify-center mb-8"
+            style="background-image: url('https://picsum.photos/1600/900');">
+            <div class="text-center bg-black bg-opacity-50 p-8 rounded">
+                <h1 class="text-4xl font-bold text-white mb-4">Willkommen auf meiner Website</h1>
+                <p class="text-white mb-4">Entdecken Sie unsere fantastischen Angebote!</p>
+                <button
+                    class="bg-pastel-blue text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300"
+                    aria-label="Loslegen">
+                    Jetzt loslegen
+                </button>
+            </div>
+        </section>
+
+        <!-- SVG-Trenner -->
+        <div class="w-full h-24 bg-pastel-blue">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-full">
+                <path d="M0,0V120H1200V0C800,120,400,120,0,0Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+
+
+        <div class="max-w-sm rounded overflow-hidden shadow-lg my-8">
+            <img class="w-full" src="https://picsum.photos/600/400" alt="Beispielbild">
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+              <p class="text-gray-600 text-base">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+              </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 mr-2 mb-2">#photography</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 mr-2 mb-2">#travel</span>
+              <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-600 mr-2 mb-2">#winter</span>
+            </div>
+          </div>
+
+        <!-- Textbanner -->
+        <div class="bg-pastel-blue p-8 rounded-lg shadow-md text-center my-8">
+            <p class="text-4xl font-bold text-white">42</p>
+            <p class="text-white mt-2">Die Antwort auf alles.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+            <div class="bg-pastel-green p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Info</h3>
+                <p class="text-gray-600">Dies ist eine informative Box.</p>
+            </div>
+            <div class="bg-pastel-pink p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-bold mb-2">Warnung</h3>
+                <p class="text-gray-600">Dies ist eine Warnung.</p>
+            </div>
+        </div>
+
+        <hr class="border-t-1 border-pastel-blue my-12">
+
+        <p class="text-3xl">Textvorlagen</p>
+
+        <div class="flex flex-col md:flex-row items-center my-8 bg-white">
+            <div class="md:w-1/2">
+                <img src="https://picsum.photos/600/400" alt="Beispielbild" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0">
+                <h2 class="text-2xl font-bold mb-4">Überschrift</h2>
+                <p class="text-gray-600">Dies ist ein Beispieltext, der neben einem Bild steht.</p>
+            </div>
+        </div>
+
+
+
+        <hr class="border-t-1 border-pastel-blue my-12">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+            <div class="text-center">
+                <i class="fas fa-book text-4xl text-pastel-blue mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Literatur</h3>
+                <p class="text-gray-600">Entdecke die Welt der Bücher.</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-laptop-code text-4xl text-pastel-blue mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Technik</h3>
+                <p class="text-gray-600">Erfahre mehr über moderne Technologien.</p>
+            </div>
+            <div class="text-center">
+                <i class="fas fa-lightbulb text-4xl text-pastel-blue mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Ideen</h3>
+                <p class="text-gray-600">Inspiration für kreative Projekte.</p>
+            </div>
+        </div>
+
+        
+
+
+
+        <hr class="border-t-1 border-pastel-blue my-12">
+
+        <div class="space-y-8 my-8">
+            <div class="flex items-start">
+                <div class="bg-pastel-blue text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">1
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Schritt 1: Planung</h3>
+                    <p class="text-gray-600">Beginne mit einer gründlichen Planung deines Projekts.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <div class="bg-pastel-blue text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">2
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Schritt 2: Umsetzung</h3>
+                    <p class="text-gray-600">Setze deine Pläne in die Tat um.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <div class="bg-pastel-blue text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">3
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold">Schritt 3: Überprüfung</h3>
+                    <p class="text-gray-600">Überprüfe die Ergebnisse und optimiere sie.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-t-1 border-pastel-blue my-12">
+
+        <div class="bg-pastel-purple p-6 rounded-lg shadow-md my-8">
+            <p class="text-white italic text-center">
+                "Die Welt ist voller Wunder,<br>
+                die darauf warten, entdeckt zu werden."
+            </p>
+        </div>
+
+        <hr class="border-t-1 border-pastel-blue my-12">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+            <div
+                class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                <h3 class="text-xl font-bold mb-2">Karte 1</h3>
+                <p class="text-gray-600">Dies ist eine Beispielkarte mit einem Hover-Effekt.</p>
+            </div>
+            <div
+                class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                <h3 class="text-xl font-bold mb-2">Karte 2</h3>
+                <p class="text-gray-600">Eine weitere Karte mit dem gleichen Effekt.</p>
+            </div>
+            <div
+                class="bg-white p-6 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:shadow-lg">
+                <h3 class="text-xl font-bold mb-2">Karte 3</h3>
+                <p class="text-gray-600">Noch eine Karte für gute Maß.</p>
+            </div>
+        </div>
+
+        <hr class="border-t-1 border-pastel-blue my-12">
+
+        <!-- lelele -->
+        <figure class="my-8">
+            <img src="https://picsum.photos/800/450" alt="Beispielbild" class="w-full h-auto rounded-lg shadow-lg">
+            <figcaption class="mt-2 text-sm text-gray-600 text-center">
+                Dies ist eine kurze Beschreibung des Bildes.
+            </figcaption>
+        </figure>
+
+        <hr class="border-t-1 border-pastel-blue my-12">
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+            <img src="https://picsum.photos/400/300" alt="Bild 1" class="w-full h-auto rounded-lg shadow-md">
+            <img src="https://picsum.photos/400/300" alt="Bild 2" class="w-full h-auto rounded-lg shadow-md">
+            <img src="https://picsum.photos/400/300" alt="Bild 3" class="w-full h-auto rounded-lg shadow-md">
+        </div>
+
+        <hr class="border-t-1 border-pastel-blue my-12">
+
+        <div class="relative my-8">
+            <img src="https://picsum.photos/800/450" alt="Beispielbild" class="w-full h-auto rounded-lg shadow-lg">
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded-lg">
+                <p class="text-white text-2xl font-bold">Dies ist ein überlagerter Text</p>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-200 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold mb-2">Über uns</h3>
+                    <p>Kurze Beschreibung Ihres Unternehmens oder Ihrer Website.</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold mb-2">Sitemap</h3>
+                    <ul>
+                        <li><a href="index.html" class="text-gray-600 hover:text-gray-900">Home</a></li>
+                        <li><a href="blog.html" class="text-gray-600 hover:text-gray-900">Blog</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Menü 1</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Menü 2</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-gray-900">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold mb-2">Folgen Sie uns</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 mt-4">
+                &copy; 2025 Meine Website. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top"
+        class="fixed bottom-4 right-4 bg-pastel-blue text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 hover:bg-blue-600"
+        aria-label="Nach oben scrollen">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
