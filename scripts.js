@@ -35,14 +35,6 @@ document.getElementById('back-to-top')?.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Mobile Dropdown Menüs (unverändert)
-document.querySelectorAll('.mobile-dropdown button').forEach(button => {
-    button.addEventListener('click', function (e) {
-        e.stopPropagation();
-        this.nextElementSibling.classList.toggle('hidden');
-    });
-});
-
 // Dark Mode Toggle (leicht angepasst, um Duplizierung zu vermeiden)
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('dark-mode-toggle');

@@ -190,34 +190,42 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
-
+    
                 // Mobile Menü-Skript
                 const mobileMenuButton = document.getElementById('mobile-menu-button');
                 const mobileMenu = document.getElementById('mobile-menu');
-
+    
                 mobileMenuButton?.addEventListener('click', () => {
                     mobileMenu.classList.toggle('hidden');
                     const icon = mobileMenuButton.querySelector('i');
                     icon.classList.toggle('fa-bars');
                     icon.classList.toggle('fa-times');
                 });
-
+    
+                // Mobile Dropdown Menüs (INITIALISIERUNG NACH DEM LADEN DES HEADERS!)
+                document.querySelectorAll('.mobile-dropdown button').forEach(button => {
+                    button.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        this.nextElementSibling.classList.toggle('hidden');
+                    });
+                });
+    
                 // Dark Mode-Skript
                 const darkModeToggle = document.getElementById('dark-mode-toggle');
                 const body = document.body;
-
+    
                 const isDarkMode = localStorage.getItem('darkMode') === 'true';
-
+    
                 if (isDarkMode) {
                     body.classList.add('dark-mode');
                     darkModeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
                 }
-
+    
                 darkModeToggle?.addEventListener('click', () => {
                     body.classList.toggle('dark-mode');
                     const isDarkMode = body.classList.contains('dark-mode');
                     localStorage.setItem('darkMode', isDarkMode);
-
+    
                     const icon = darkModeToggle.querySelector('i');
                     icon.classList.toggle('fa-moon');
                     icon.classList.toggle('fa-sun');

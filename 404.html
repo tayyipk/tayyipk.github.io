@@ -182,6 +182,14 @@
                     icon.classList.toggle('fa-times');
                 });
 
+                // Mobile Dropdown Menüs (INITIALISIERUNG NACH DEM LADEN DES HEADERS!)
+                document.querySelectorAll('.mobile-dropdown button').forEach(button => {
+                    button.addEventListener('click', function (e) {
+                        e.stopPropagation();
+                        this.nextElementSibling.classList.toggle('hidden');
+                    });
+                });
+
                 // Dark Mode-Skript
                 const darkModeToggle = document.getElementById('dark-mode-toggle');
                 const body = document.body;
@@ -203,8 +211,7 @@
                     icon.classList.toggle('fa-sun');
                 });
             });
-    </script>
-    <!-- Scripts -->
+    </script> <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>
 
