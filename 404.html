@@ -14,6 +14,7 @@
     <!-- Tailwind-Konfiguration -->
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -43,20 +44,21 @@
         <div class="text-center">
             <!-- Tanzende ASCII-Person -->
             <pre id="ascii-animation" class="mb-6"></pre>
-    
+
             <!-- Witziger Text -->
             <h1 class="text-6xl font-bold text-gray-800 mb-4">404</h1>
-            <p class="text-2xl text-gray-600 mb-8">
+            <p class="text-2xl text-gray-800 mb-8">
                 Oops! Die Seite ist wohl auf Urlaub.<br>
                 Vielleicht tanzt sie gerade auf einer einsamen Insel? 🏝️
             </p>
-    
+
             <!-- Button zur Startseite -->
-            <a href="/" class="bg-pastel-blue text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300">
+            <a href="/"
+                class="bg-pastel-blue text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300">
                 Zurück zur Startseite
             </a>
         </div>
-    
+
         <script>
             // ASCII-Frames der tanzenden Person
             const frames = [
@@ -81,16 +83,16 @@
                    /   \\
                 `
             ];
-    
+
             let currentFrame = 0;
             const asciiElement = document.getElementById('ascii-animation');
-    
+
             // Funktion zum Wechseln der Frames
             function animate() {
                 asciiElement.textContent = frames[currentFrame];
                 currentFrame = (currentFrame + 1) % frames.length; // Nächster Frame
             }
-    
+
             // Animation starten (alle 300ms)
             setInterval(animate, 300);
         </script>
@@ -162,39 +164,47 @@
         aria-label="Nach oben scrollen">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <!-- Header einbinden -->
+    <!-- Header einbinden und Skripte ausführen -->
     <script>
         fetch('header.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
 
-                // Dark Mode-Skript nach dem Einbinden des Headers ausführen
+                // Mobile Menü-Skript
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                mobileMenuButton?.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    icon.classList.toggle('fa-bars');
+                    icon.classList.toggle('fa-times');
+                });
+
+                // Dark Mode-Skript
                 const darkModeToggle = document.getElementById('dark-mode-toggle');
                 const body = document.body;
 
-                // Überprüfe, ob der Dark Mode im localStorage gespeichert ist
                 const isDarkMode = localStorage.getItem('darkMode') === 'true';
 
-                // Setze den Dark Mode basierend auf dem gespeicherten Zustand
                 if (isDarkMode) {
                     body.classList.add('dark-mode');
                     darkModeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
                 }
 
-                // Event Listener für den Dark Mode Button
                 darkModeToggle?.addEventListener('click', () => {
                     body.classList.toggle('dark-mode');
                     const isDarkMode = body.classList.contains('dark-mode');
                     localStorage.setItem('darkMode', isDarkMode);
 
-                    // Wechsle das Icon zwischen Mond und Sonne
                     const icon = darkModeToggle.querySelector('i');
                     icon.classList.toggle('fa-moon');
                     icon.classList.toggle('fa-sun');
                 });
             });
-    </script>    <!-- Scripts -->
+    </script>
+    <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>
 
