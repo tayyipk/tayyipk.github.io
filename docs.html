@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dokumentation - Meine Website</title>
 
-    <!-- Tailwind CSS über CDN -->
+    <!-- Tailwind CSS und eigene Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Eigene Styles -->
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Tailwind-Konfiguration -->
@@ -40,129 +36,8 @@
 </head>
 
 <body class="bg-pastel-blue">
-
-    <!-- Header -->
-    <header class="bg-white shadow-md fixed w-full z-50">
-        <nav class="container mx-auto px-4 py-2 flex justify-between items-center">
-            <div class="text-2xl font-bold text-pastel-blue">
-                <!-- Darkmode Button -->
-                <button id="dark-mode-toggle" class="text-gray-600 hover:text-gray-900"
-                    aria-label="Dark Mode umschalten">
-                    <i class="fas fa-moon text-lg px-2"></i> <!-- Icon für den Dark Mode -->
-                </button>Logo
-            </div>
-
-            <!-- Desktop Navigation -->
-            <div class="hidden md:flex space-x-4">
-                <a href="index.html" class="text-gray-600 hover:text-gray-900 flex items-center"
-                    aria-label="Zur Startseite">
-                    <i class="fas fa-home mr-2"></i>Home
-                </a>
-
-                <!-- Dropdown Menüs -->
-                <div class="dropdown relative group">
-                    <button class="text-gray-600 hover:text-gray-900 flex items-center">
-                        <i class="fas fa-list mr-2"></i><a href="templates.html">Templates</a> <i
-                            class="fas fa-chevron-down ml-1"></i>
-                    </button>
-                    <div class="dropdown-menu absolute left-0 mt-2 bg-white py-2 w-48 rounded-md shadow-xl">
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 1</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 2</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 3</a>
-                    </div>
-                </div>
-
-                <div class="dropdown relative group">
-                    <button class="text-gray-600 hover:text-gray-900 flex items-center">
-                        <i class="fas fa-cog mr-2"></i><a href="docs.html">Dokumentation</a> <i
-                            class="fas fa-chevron-down ml-1"></i>
-                    </button>
-                    <div class="dropdown-menu absolute left-0 mt-2 bg-white py-2 w-48 rounded-md shadow-xl">
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 1</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 2</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 3</a>
-                    </div>
-                </div>
-
-                <div class="dropdown relative group">
-                    <button class="text-gray-600 hover:text-gray-900 flex items-center">
-                        <i class="fas fa-user mr-2"></i><a href="blog.html">re:Blog</a> <i
-                            class="fas fa-chevron-down ml-1"></i>
-                    </button>
-                    <div class="dropdown-menu absolute left-0 mt-2 bg-white py-2 w-48 rounded-md shadow-xl">
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 1</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 2</a>
-                        <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-gray-200">Untermenü 3</a>
-                    </div>
-                </div>
-
-                <a href="#" class="text-gray-600 hover:text-gray-900 flex items-center" aria-label="Zur Kontaktseite">
-                    <i class="fas fa-envelope mr-2"></i>Kontakt
-                </a>
-            </div>
-
-            <!-- Mobile Menü Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-600" aria-label="Mobile-Menü anzeigen">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-    </header>
-
-    <!-- Mobile Menü -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white fixed w-full z-40 top-16 shadow-lg">
-        <a href="index.html" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Zur Startseite">
-            <i class="fas fa-home mr-2"></i>Home
-        </a>
-
-        <!-- Dropdown Menü 1 -->
-        <div class="mobile-dropdown">
-            <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Menü 1 anzeigen">
-                <i class="fas fa-list mr-2"></i>Menü 1 <i class="fas fa-chevron-down ml-1"></i>
-            </button>
-            <div class="hidden pl-8">
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 1">Untermenü
-                    1</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 2">Untermenü
-                    2</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 3">Untermenü
-                    3</a>
-            </div>
-        </div>
-
-        <!-- Dropdown Menü 2 -->
-        <div class="mobile-dropdown">
-            <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Menü 2 anzeigen">
-                <i class="fas fa-cog mr-2"></i>Menü 2 <i class="fas fa-chevron-down ml-1"></i>
-            </button>
-            <div class="hidden pl-8">
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 1">Untermenü
-                    1</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 2">Untermenü
-                    2</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 3">Untermenü
-                    3</a>
-            </div>
-        </div>
-
-        <div class="mobile-dropdown">
-            <button class="w-full text-left py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Menü 3 anzeigen">
-                <i class="fas fa-user mr-2"></i>Menü 3 <i class="fas fa-chevron-down ml-1"></i>
-            </button>
-            <div class="hidden pl-8">
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 1">Untermenü
-                    1</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 2">Untermenü
-                    2</a>
-                <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Untermenü 3">Untermenü
-                    3</a>
-            </div>
-        </div>
-
-        <a href="#" class="block py-2 px-4 text-gray-800 hover:bg-gray-100" aria-label="Zur Kontaktseite">
-            <i class="fas fa-envelope mr-2"></i>Kontakt
-        </a>
-    </div>
-
+    <!-- Platzhalter für den Header -->
+    <div id="header"></div>
     <!-- Hauptinhalt -->
     <main class="container mx-auto px-4 py-24 bg-white bg-opacity-80">
 
@@ -308,7 +183,7 @@
     <footer class="bg-gray-800 py-6">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-300">
-    
+
                 <!-- Über uns -->
                 <div class="mb-4 md:mb-0">
                     <h3 class="text-lg font-bold mb-2">Über uns</h3>
@@ -316,51 +191,93 @@
                         Kurze Beschreibung Ihres Unternehmens oder Ihrer Website. Halte es prägnant und informativ.
                     </p>
                 </div>
-    
+
                 <!-- Quick Links -->
                 <div class="mb-4 md:mb-0">
                     <h3 class="text-lg font-bold mb-1">Quick Links</h3>
                     <ul class="space-y-0.25">
-                        <li><a href="index.html" class="text-xs hover:text-pastel-blue transition duration-300">Home</a></li>
-                        <li><a href="templates.html" class="text-xs hover:text-pastel-blue transition duration-300">Templates</a></li>
-                        <li><a href="docs.html" class="text-xs hover:text-pastel-blue transition duration-300">Dokumentation</a></li>
-                        <li><a href="blog.html" class="text-xs hover:text-pastel-blue transition duration-300">Blog</a></li>
-                        <li><a href="contact.html" class="text-xs hover:text-pastel-blue transition duration-300">Kontakt</a></li>
+                        <li><a href="index.html" class="text-xs hover:text-pastel-blue transition duration-300">Home</a>
+                        </li>
+                        <li><a href="templates.html"
+                                class="text-xs hover:text-pastel-blue transition duration-300">Templates</a></li>
+                        <li><a href="docs.html"
+                                class="text-xs hover:text-pastel-blue transition duration-300">Dokumentation</a></li>
+                        <li><a href="blog.html" class="text-xs hover:text-pastel-blue transition duration-300">Blog</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-xs hover:text-pastel-blue transition duration-300">Kontakt</a></li>
                     </ul>
                 </div>
-    
+
                 <!-- Social Media -->
                 <div>
                     <h3 class="text-lg font-bold mb-2">Folge uns</h3>
                     <div class="flex space-x-3">
-                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300" aria-label="Facebook">
+                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300"
+                            aria-label="Facebook">
                             <i class="fab fa-facebook-f text-sm"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300" aria-label="Twitter">
+                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300"
+                            aria-label="Twitter">
                             <i class="fab fa-twitter text-sm"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300" aria-label="Instagram">
+                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300"
+                            aria-label="Instagram">
                             <i class="fab fa-instagram text-sm"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300" aria-label="LinkedIn">
+                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300"
+                            aria-label="LinkedIn">
                             <i class="fab fa-linkedin-in text-sm"></i>
                         </a>
                     </div>
                 </div>
             </div>
-    
+
             <!-- Copyright -->
             <div class="border-t border-gray-700 mt-4 pt-4 text-center text-xs text-gray-400">
                 &copy; 2025 Meine Website. Alle Rechte vorbehalten.
             </div>
         </div>
     </footer>
-    
+
     <button id="back-to-top"
         class="fixed bottom-4 right-4 bg-pastel-blue text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 hover:bg-blue-600"
         aria-label="Nach oben scrollen">
         <i class="fas fa-arrow-up"></i>
     </button>
+        <!-- Header einbinden -->
+        <script>
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+    
+                    // Dark Mode-Skript nach dem Einbinden des Headers ausführen
+                    const darkModeToggle = document.getElementById('dark-mode-toggle');
+                    const body = document.body;
+    
+                    // Überprüfe, ob der Dark Mode im localStorage gespeichert ist
+                    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    
+                    // Setze den Dark Mode basierend auf dem gespeicherten Zustand
+                    if (isDarkMode) {
+                        body.classList.add('dark-mode');
+                        darkModeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+                    }
+    
+                    // Event Listener für den Dark Mode Button
+                    darkModeToggle?.addEventListener('click', () => {
+                        body.classList.toggle('dark-mode');
+                        const isDarkMode = body.classList.contains('dark-mode');
+                        localStorage.setItem('darkMode', isDarkMode);
+    
+                        // Wechsle das Icon zwischen Mond und Sonne
+                        const icon = darkModeToggle.querySelector('i');
+                        icon.classList.toggle('fa-moon');
+                        icon.classList.toggle('fa-sun');
+                    });
+                });
+        </script>
     <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>

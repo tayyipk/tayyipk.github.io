@@ -118,5 +118,18 @@
         <i class="fas fa-envelope mr-2"></i>Kontakt
     </a>
 </div>
-  <!-- Scripts -->
-  <script src="scripts.js"></script>
+ <!-- Scripts -->
+<script src="scripts.js"></script>
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        var mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-dropdown > button').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var dropdownContent = this.nextElementSibling;
+            dropdownContent.classList.toggle('hidden');
+        });
+    });
+</script>

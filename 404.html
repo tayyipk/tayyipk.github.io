@@ -168,16 +168,33 @@
             .then(response => response.text())
             .then(data => {
                 document.getElementById('header').innerHTML = data;
-                // Mobile Menü-Skript nach dem Einbinden des Headers ausführen
-                const mobileMenuButton = document.getElementById('mobile-menu-button');
-                const mobileMenu = document.getElementById('mobile-menu');
 
-                mobileMenuButton?.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
+                // Dark Mode-Skript nach dem Einbinden des Headers ausführen
+                const darkModeToggle = document.getElementById('dark-mode-toggle');
+                const body = document.body;
+
+                // Überprüfe, ob der Dark Mode im localStorage gespeichert ist
+                const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+                // Setze den Dark Mode basierend auf dem gespeicherten Zustand
+                if (isDarkMode) {
+                    body.classList.add('dark-mode');
+                    darkModeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+                }
+
+                // Event Listener für den Dark Mode Button
+                darkModeToggle?.addEventListener('click', () => {
+                    body.classList.toggle('dark-mode');
+                    const isDarkMode = body.classList.contains('dark-mode');
+                    localStorage.setItem('darkMode', isDarkMode);
+
+                    // Wechsle das Icon zwischen Mond und Sonne
+                    const icon = darkModeToggle.querySelector('i');
+                    icon.classList.toggle('fa-moon');
+                    icon.classList.toggle('fa-sun');
                 });
             });
-    </script>
-    <!-- Scripts -->
+    </script>    <!-- Scripts -->
     <script src="scripts.js"></script>
 </body>
 
