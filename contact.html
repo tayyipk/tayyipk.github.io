@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Meine Website</title>
+
+    <!-- Tailwind CSS und eigene Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Tailwind-Konfiguration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastel: {
+                            blue: '#A0E7E5',
+                            yellow: '#FBE7C6',
+                            green: '#B4F8C8',
+                            pink: '#FFAEBC',
+                            purple: '#D0B8E3',
+                            orange: '#FFD8B1',
+                        },
+                    },
+                    transitionProperty: {
+                        visibility: 'visibility',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-pastel-blue">
+    <!-- Platzhalter für den Header -->
+    <div id="header"></div>
+    <!-- Hauptinhalt -->
+    <main class="container mx-auto px-4 py-24 bg-white bg-opacity-80">
+
+        <!-- Call to Action Banner -->
+        <section class="bg-cover bg-center h-64 flex items-center justify-center mb-8"
+            style="background-image: url('https://picsum.photos/1600/900');">
+            <div class="text-center bg-black bg-opacity-50 p-8 rounded">
+                <h1 class="text-4xl font-bold text-white mb-4">Willkommen auf meiner Website</h1>
+                <p class="text-white mb-4">Hier entsteht die Kontaktmöglichkeit!</p>
+                <button
+                    class="bg-pastel-blue text-white px-6 py-3 rounded-full hover:bg-blue-600 transition duration-300"
+                    aria-label="Loslegen">
+                    Jetzt loslegen
+                </button>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-2 md:grid-cols-3 gap-4 my-8">
+            <div class="bg-pastel-yellow p-4 rounded">
+                <pre id="ascii-animation"></pre>
+                <script>
+                    // ASCII-Frames der tanzenden Person
+                    const frames = [
+                `
+                 (•_•)
+                <)   )╯
+                 /    \\
+                `,
+                `
+                 \\(•_•)
+                  (   (> 
+                   /   \\
+                `,
+                `
+                 (•_•)
+                <)   )╯
+                 /    \\
+                `,
+                `
+                 \\(•_•)
+                  (   (> 
+                   /   \\
+                `,
+                `
+                 (•_•)
+                <)   )╯
+                 /    \\
+                `,
+                `
+                 \\(•_•)
+                  (   (> 
+                   /   \\
+                `
+            ];
+            
+                    let currentFrame = 0;
+                    const asciiElement = document.getElementById('ascii-animation');
+            
+                    // Funktion zum Wechseln der Frames
+                    function animate() {
+                        asciiElement.textContent = frames[currentFrame];
+                        currentFrame = (currentFrame + 1) % frames.length; // Nächster Frame
+                    }
+            
+                    // Animation starten (alle 300ms)
+                    setInterval(animate, 300);
+                </script>
+            </div>
+            <div class="bg-pastel-green p-4 rounded">
+                <p><h3 class="font-bold mb-2"><a href="admin.php"><i class="fas fa-cog mr-2"></i>Zum Adminpanel</a></h3></p>
+            </div>
+            <div class="bg-pastel-pink p-4 rounded">
+                <h3 class="font-bold mb-2">Kachel 3</h3>
+                <p>Hier steht ein kurzer Beschreibungstext für Kachel 3.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-gray-300">
+
+                <!-- Über uns -->
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold mb-2">Über uns</h3>
+                    <p class="text-xs">
+                        Kurze Beschreibung Ihres Unternehmens oder Ihrer Website. Halte es prägnant und informativ.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-lg font-bold mb-1">Quick Links</h3>
+                    <ul class="space-y-0.25">
+                        <li><a href="index.html" class="text-xs hover:text-pastel-blue transition duration-300">Home</a>
+                        </li>
+                        <li><a href="templates.html"
+                                class="text-xs hover:text-pastel-blue transition duration-300">Templates</a></li>
+                        <li><a href="docs.html"
+                                class="text-xs hover:text-pastel-blue transition duration-300">Dokumentation</a></li>
+                        <li><a href="blog.html" class="text-xs hover:text-pastel-blue transition duration-300">Blog</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-xs hover:text-pastel-blue transition duration-300">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Folge uns</h3>
+                    <div class="flex space-x-3">
+                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300"
+                            aria-label="Facebook">
+                            <i class="fab fa-facebook-f text-sm"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300"
+                            aria-label="Twitter">
+                            <i class="fab fa-twitter text-sm"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300"
+                            aria-label="Instagram">
+                            <i class="fab fa-instagram text-sm"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-pastel-blue transition duration-300"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-4 pt-4 text-center text-xs text-gray-400">
+                &copy; 2025 Meine Website. Alle Rechte vorbehalten.
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top"
+        class="fixed bottom-4 right-4 bg-pastel-blue text-white p-3 rounded-full shadow-lg transition-opacity duration-300 opacity-0 hover:bg-blue-600"
+        aria-label="Nach oben scrollen">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Header einbinden -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+                // Mobile Menü-Skript nach dem Einbinden des Headers ausführen
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                mobileMenuButton?.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            });
+    </script>
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
