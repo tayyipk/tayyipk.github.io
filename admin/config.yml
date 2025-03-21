@@ -1,0 +1,29 @@
+backend:
+  name: git-gateway
+  branch: main # Replace with your default branch (e.g., main or master)
+
+# Media folder for uploaded images
+media_folder: "assets/img" # Folder where uploaded images will be stored
+public_folder: "/assets/img" # Public path for images
+
+# Collections (e.g., blog posts, projects, etc.)
+collections:
+  - name: "blog" # Name of the collection (e.g., for blog posts)
+    label: "Blog"
+    folder: "_posts" # Folder where blog posts are stored
+    create: true # Allow creating new posts
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename format
+    fields: # Fields for each blog post
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # Add more collections as needed (e.g., for projects, pages, etc.)
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects" # Example folder for projects
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Image", name: "image", widget: "image" }
