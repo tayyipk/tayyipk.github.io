@@ -5,8 +5,8 @@
 
 # Appearance
 appearance:
-  mode: system
-  color: emerald
+  mode: dark
+  color: indigo
 
 # SEO
 marketing:
@@ -34,8 +34,11 @@ header:
     fixed_to_top: true
     show_search: true
     show_theme_chooser: true
-    logo:
+    highlight_active_link: true
+    logo: 
       text: "TayyipK"
+      filename: "logo.png"
+      alt: "TayyipK"
 
 # Site footer
 footer:
@@ -44,7 +47,7 @@ footer:
     license:
       enable: true
       allow_derivatives: false
-      share_alike: true
+      share_alike: false
       allow_commercial: false
 
 # Localization

@@ -10,6 +10,22 @@
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
+    <loc>http://localhost:1313/kompendium/</loc>
+    <lastmod>2025-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/kompendium/cybpun/</loc>
+    <lastmod>2025-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/tags/story/</loc>
+    <lastmod>2025-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-03-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>http://localhost:1313/projects/</loc>
     <lastmod>2024-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,10 +47,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/tags/markdown/</loc>
-    <lastmod>2023-10-27T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2023-10-27T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -90,19 +102,15 @@
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/teaching/js/</loc>
+    <loc>http://localhost:1313/kompendium/js/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:1313/teaching/python/</loc>
+    <loc>http://localhost:1313/kompendium/python/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2023-10-24T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:1313/teaching/</loc>
     <lastmod>2023-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>

@@ -141,10 +141,16 @@ skills:
 languages:
   - name: English
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: German
+    percent: 100
+  - name: Turkish
+    percent: 100
+  - name: Dutch
+    percent: 80
+  - name: Azeri
+    percent: 70
+  - name: Spanish
+    percent: 60    
 
 # Awards
 awards:
@@ -166,7 +172,8 @@ awards:
       - Gain an in-depth understanding of the specific mechanics of Bitcoin
       - Understand Bitcoin's real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin's Proof-of-Work consensus algorithm
 
+---
+
 # About Me
 about: |
   Chien Shiung Wu is a professor of artificial intelligence at the Stanford AI Lab. Her research interests include distributed robotics, mobile computing and programmable matter. She leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
----
