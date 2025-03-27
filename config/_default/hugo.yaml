@@ -7,6 +7,7 @@
 title: Meine Hugo Seite
 # Website URL
 baseURL: 'https://tayyipk.github.io/'
+theme: hugo-blox-builder
 
 ############################
 ## LANGUAGE
