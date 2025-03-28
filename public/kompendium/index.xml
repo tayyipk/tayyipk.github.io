@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kompendium | Meine Hugo Seite</title>
-    <link>https://tayyipk.github.io/kompendium/</link>
-      <atom:link href="https://tayyipk.github.io/kompendium/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/kompendium/</link>
+      <atom:link href="http://localhost:1313/kompendium/index.xml" rel="self" type="application/rss+xml" />
     <description>Kompendium</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 19 Mar 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://tayyipk.github.io/media/logo_hu_855ccd6265d3b257.png</url>
+      <url>http://localhost:1313/media/logo_hu_855ccd6265d3b257.png</url>
       <title>Kompendium</title>
-      <link>https://tayyipk.github.io/kompendium/</link>
+      <link>http://localhost:1313/kompendium/</link>
     </image>
     
     <item>
       <title>Renn!</title>
-      <link>https://tayyipk.github.io/kompendium/cybpun/</link>
+      <link>http://localhost:1313/kompendium/cybpun/</link>
       <pubDate>Wed, 19 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://tayyipk.github.io/kompendium/cybpun/</guid>
+      <guid>http://localhost:1313/kompendium/cybpun/</guid>
       <description>&lt;h2 id=&#34;19-märz-2090&#34;&gt;19. März 2090&lt;/h2&gt;
 &lt;p&gt;Heute war wieder ein verrückter Tag in Neo-Tokio. Ich bin früh aufgestanden, um den Sonnenaufgang über den Wolkenkratzern zu sehen. Die Stadt ist nie still, aber in den frühen Morgenstunden gibt es eine Art Ruhe, die ich besonders mag. Die Straßenlaternen fangen an, sich abzuschalten, und die ersten Hologramme beginnen, sich über den Dächern zu materialisieren.&lt;/p&gt;
 &lt;p&gt;Ich habe mich auf den Weg zum Markt gemacht, um ein paar Ersatzteile für mein altes Cyberdeck zu besorgen. Der Markt ist immer ein Abenteuer – man weiß nie, was man finden wird. Heute habe ich ein paar coole Gadgets entdeckt, die ich vielleicht in mein nächstes Projekt einbauen kann.&lt;/p&gt;
@@ -127,9 +127,9 @@ Jetzt sitze ich hier und frage mich: Habe ich gerade Freunde gefunden? Oder habe
     
     <item>
       <title>Learn JavaScript</title>
-      <link>https://tayyipk.github.io/kompendium/js/</link>
+      <link>http://localhost:1313/kompendium/js/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://tayyipk.github.io/kompendium/js/</guid>
+      <guid>http://localhost:1313/kompendium/js/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://hugoblox.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Blox Builder&lt;/a&gt; is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
@@ -172,7 +172,7 @@ Jetzt sitze ich hier und frage mich: Habe ich gerade Freunde gefunden? Oder habe
 
 
 &lt;audio controls &gt;
-  &lt;source src=&#34;https://tayyipk.github.io/kompendium/js/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+  &lt;source src=&#34;http://localhost:1313/kompendium/js/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
 &lt;/audio&gt;
 
 &lt;h2 id=&#34;test-students&#34;&gt;Test students&lt;/h2&gt;
@@ -249,9 +249,9 @@ data.head()
     
     <item>
       <title>Learn Python</title>
-      <link>https://tayyipk.github.io/kompendium/python/</link>
+      <link>http://localhost:1313/kompendium/python/</link>
       <pubDate>Tue, 24 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://tayyipk.github.io/kompendium/python/</guid>
+      <guid>http://localhost:1313/kompendium/python/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://hugoblox.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo Blox Builder&lt;/a&gt; is designed to give technical content creators a seamless experience. You can focus on the content and the Hugo Blox Builder which this template is built upon handles the rest.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Embed videos, podcasts, code, LaTeX math, and even test students!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;On this page, you&amp;rsquo;ll find some examples of the types of technical content that can be rendered with Hugo Blox.&lt;/p&gt;
@@ -294,7 +294,7 @@ data.head()
 
 
 &lt;audio controls &gt;
-  &lt;source src=&#34;https://tayyipk.github.io/kompendium/python/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+  &lt;source src=&#34;http://localhost:1313/kompendium/python/ambient-piano.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
 &lt;/audio&gt;
 
 &lt;h2 id=&#34;test-students&#34;&gt;Test students&lt;/h2&gt;

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Story | Meine Hugo Seite</title>
-    <link>https://tayyipk.github.io/tags/story/</link>
-      <atom:link href="https://tayyipk.github.io/tags/story/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:1313/tags/story/</link>
+      <atom:link href="http://localhost:1313/tags/story/index.xml" rel="self" type="application/rss+xml" />
     <description>Story</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 19 Mar 2025 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://tayyipk.github.io/media/logo_hu_855ccd6265d3b257.png</url>
+      <url>http://localhost:1313/media/logo_hu_855ccd6265d3b257.png</url>
       <title>Story</title>
-      <link>https://tayyipk.github.io/tags/story/</link>
+      <link>http://localhost:1313/tags/story/</link>
     </image>
     
     <item>
       <title>Renn!</title>
-      <link>https://tayyipk.github.io/kompendium/cybpun/</link>
+      <link>http://localhost:1313/kompendium/cybpun/</link>
       <pubDate>Wed, 19 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://tayyipk.github.io/kompendium/cybpun/</guid>
+      <guid>http://localhost:1313/kompendium/cybpun/</guid>
       <description>&lt;h2 id=&#34;19-märz-2090&#34;&gt;19. März 2090&lt;/h2&gt;
 &lt;p&gt;Heute war wieder ein verrückter Tag in Neo-Tokio. Ich bin früh aufgestanden, um den Sonnenaufgang über den Wolkenkratzern zu sehen. Die Stadt ist nie still, aber in den frühen Morgenstunden gibt es eine Art Ruhe, die ich besonders mag. Die Straßenlaternen fangen an, sich abzuschalten, und die ersten Hologramme beginnen, sich über den Dächern zu materialisieren.&lt;/p&gt;
 &lt;p&gt;Ich habe mich auf den Weg zum Markt gemacht, um ein paar Ersatzteile für mein altes Cyberdeck zu besorgen. Der Markt ist immer ein Abenteuer – man weiß nie, was man finden wird. Heute habe ich ein paar coole Gadgets entdeckt, die ich vielleicht in mein nächstes Projekt einbauen kann.&lt;/p&gt;
